@@ -2,9 +2,16 @@ import { Link } from 'expo-router';
 import { View, Text, Pressable } from 'react-native';
 
 const items = [
-  { path: '/concepts/superposition', title: 'Superposition' },
-  { path: '/concepts/double-slit', title: 'Double Slit' },
-  { path: '/concepts/entanglement', title: 'Entanglement' },
+  { path: '/concepts/wavefunction-born-rule', title: 'Wavefunction & Born Rule' },
+  { path: '/concepts/heisenberg-uncertainty', title: 'Heisenberg Uncertainty' },
+  { path: '/concepts/superposition', title: 'Superposition Principle' },
+  { path: '/concepts/time-dependent-schrodinger', title: 'Time-Dependent Schr\u00f6dinger' },
+  { path: '/concepts/quantum-tunneling', title: 'Quantum Tunneling' },
+  { path: '/concepts/spin-and-pauli-matrices', title: 'Spin & Pauli Matrices' },
+  { path: '/concepts/entanglement', title: 'Quantum Entanglement' },
+  { path: '/concepts/measurement-collapse', title: 'Measurement & Collapse' },
+  { path: '/concepts/hilbert-space-bra-ket', title: 'Hilbert Space & Bra–Ket' },
+  { path: '/concepts/feynman-path-integrals', title: 'Feynman Path Integrals' },
 ];
 
 export default function ConceptsIndex() {

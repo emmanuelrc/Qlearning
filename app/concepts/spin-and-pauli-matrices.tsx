@@ -1,22 +1,24 @@
 import { View, Text } from 'react-native';
 import TwoPane from '../../components/TwoPane';
 import ConceptCard from '../../components/ConceptCard';
+import Equation from '../../components/Equation';
 
-export default function Entanglement() {
+export default function SpinAndPauliMatrices() {
   return (
     <View style={{ flex:1, padding:16, gap:12 }}>
       <TwoPane
         standard={
           <ConceptCard title="Standard Concept">
             <Text style={{ color:'#b9d7dc' }}>
-              Entanglement occurs when the state of one particle cannot be described independently of another, even when separated by large distances. Measurements on entangled subsystems show correlations stronger than classically allowed.
+              Spin is an intrinsic form of angular momentum described by operators obeying SU(2) algebra. For spin-1/2 particles, observables are represented by the Pauli matrices.
             </Text>
+            <Equation tex={'[\\sigma_i,\\sigma_j]=2i\\varepsilon_{ijk}\\sigma_k'} />
           </ConceptCard>
         }
         simple={
           <ConceptCard title="Simple Version">
             <Text style={{ color:'#b9d7dc' }}>
-              Imagine two magic dice that always show matching numbers no matter how far apart they are. Rolling one instantly tells you the result of the other. That's entanglement.
+              Picture a tiny top that never stops spinning. Pauli matrices are like switches telling how it's spinning along different directions. Measuring gives only "up" or "down".
             </Text>
           </ConceptCard>
         }
