@@ -4,6 +4,7 @@ import { View, Text, Pressable } from 'react-native';
 const items = [
   { path: '/concepts/superposition', title: 'Superposition' },
   { path: '/concepts/double-slit', title: 'Double Slit' },
+  { path: '/concepts/entanglement', title: 'Entanglement' },
 ];
 
 export default function ConceptsIndex() {

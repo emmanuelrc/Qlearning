@@ -33,6 +33,7 @@ app/
     index.tsx
     superposition.tsx
     double-slit.tsx
+    entanglement.tsx
 components/
   Equation.tsx
   ConceptCard.tsx
