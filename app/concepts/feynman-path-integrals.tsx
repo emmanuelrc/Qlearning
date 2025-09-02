@@ -18,7 +18,7 @@ export default function FeynmanPathIntegrals() {
         simple={
           <ConceptCard title="Simple Version">
             <Text style={{ color:'#b9d7dc' }}>
-              To know where a particle goes, imagine it trying every route. Each path adds a little voice; the paths that agree get louder while the rest cancel, revealing the most likely route.
+              {'To know where a particle goes, imagine it trying every route. Each path adds a little voice; the paths that agree get louder while the rest cancel, revealing the most likely route.'}
             </Text>
           </ConceptCard>
         }
