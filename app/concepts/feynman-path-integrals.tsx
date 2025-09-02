@@ -10,15 +10,17 @@ export default function FeynmanPathIntegrals() {
         standard={
           <ConceptCard title="Standard Concept">
             <Text style={{ color: '#b9d7dc' }}>
-              {'The path integral formulation sums over all possible paths connecting initial and final states, each weighted by the phase e^{iS/ħ}. (Feynman & Hibbs, 1965)'}
+              The path integral formulation sums over all possible paths connecting initial and final states, each
+              weighted by the phase e^{iS/ħ}. (Feynman & Hibbs, 1965)
             </Text>
-            <Equation tex={'\\langle x_f,t_f | x_i,t_i \\rangle = \\int \\mathcal{D}[x(t)] e^{\\tfrac{i}{\\hbar}S[x(t)]}'} />
+            <Equation tex={'\\langle x_f,t_f \\mid x_i,t_i \\rangle = \\int \\mathcal{D}[x(t)]\\; e^{\\tfrac{i}{\\hbar} S[x(t)]}'} />
           </ConceptCard>
         }
         simple={
           <ConceptCard title="Simple Version">
             <Text style={{ color: '#b9d7dc' }}>
-              {'To know where a particle goes, imagine it trying every route. Each path adds a little voice; the paths that agree get louder while the rest cancel, revealing the most likely route.'}
+              To know where a particle goes, imagine it trying every route. Each path adds a little voice; the paths
+              that agree get louder while the rest cancel, revealing the most likely route.
             </Text>
           </ConceptCard>
         }
@@ -26,3 +28,4 @@ export default function FeynmanPathIntegrals() {
     </View>
   );
 }
+
