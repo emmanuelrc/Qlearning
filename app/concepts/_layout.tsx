@@ -16,6 +16,8 @@ export default function ConceptsLayout() {
           </Link>
         ) : undefined,
       })}
-    />
+    >
+      <Stack.Screen name="index" options={{ title: 'concepts' }} />
+    </Stack>
   );
 }
