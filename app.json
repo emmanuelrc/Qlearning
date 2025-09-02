@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "qm-edu",
+    "slug": "qm-edu",
+    "scheme": "qmedu",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "jsEngine": "hermes",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "plugins": [
+      "expo-router"
+    ],
+    "extra": {
+      "router": {}
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
