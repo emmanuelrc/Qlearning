@@ -2,21 +2,21 @@ import { View, Text } from 'react-native';
 import TwoPane from '../../components/TwoPane';
 import ConceptCard from '../../components/ConceptCard';
 
-export default function Entanglement() {
+export default function QuantumTunneling() {
   return (
     <View style={{ flex:1, padding:16, gap:12 }}>
       <TwoPane
         standard={
           <ConceptCard title="Standard Concept">
             <Text style={{ color:'#b9d7dc' }}>
-              Entanglement occurs when the state of one particle cannot be described independently of another, even when separated by large distances. Measurements on entangled subsystems show correlations stronger than classically allowed.
+              Quantum tunneling allows a particle to pass through a potential barrier even when its energy is lower than the barrier height. The probability depends exponentially on the barrier's width and height.
             </Text>
           </ConceptCard>
         }
         simple={
           <ConceptCard title="Simple Version">
             <Text style={{ color:'#b9d7dc' }}>
-              Imagine two magic dice that always show matching numbers no matter how far apart they are. Rolling one instantly tells you the result of the other. That's entanglement.
+              Imagine a ball rolling toward a hill. Even if it lacks enough energy to go over, quantum mechanics lets it sometimes appear on the other side as if through a secret tunnel.
             </Text>
           </ConceptCard>
         }
