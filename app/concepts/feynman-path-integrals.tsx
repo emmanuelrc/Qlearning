@@ -10,7 +10,7 @@ export default function FeynmanPathIntegrals() {
         standard={
           <ConceptCard title="Standard Concept">
             <Text style={{ color:'#b9d7dc' }}>
-              The path integral formulation sums over all possible paths connecting initial and final states, each weighted by the phase e^{iS/\u0127}.
+              {'The path integral formulation sums over all possible paths connecting initial and final states, each weighted by the phase e^{iS/ħ}.'}
             </Text>
             <Equation tex={'\\langle x_f,t_f | x_i,t_i \\rangle = \\int \\mathcal{D}[x(t)] e^{\\tfrac{i}{\\hbar}S[x(t)]}'} />
           </ConceptCard>
@@ -26,3 +26,4 @@ export default function FeynmanPathIntegrals() {
     </View>
   );
 }
+
