@@ -6,7 +6,13 @@ type Props = { tex: string; block?: boolean };
 
 // Dynamically load native math view only on native
 let NativeMathView: any = null;
-if (Platform.OS !== 'web') {
+let katex: any = null;
+if (Platform.OS === 'web') {
+  try {
+    katex = require('katex');
+    require('katex/dist/katex.min.css');
+  } catch {}
+} else {
   try {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     NativeMathView = require('react-native-math-view').default;
@@ -38,10 +44,9 @@ export default function Equation({ tex, block = true }: Props) {
 
     // Use global KaTeX loaded from CDN in web/index.html
     const html = useMemo(() => {
-      const w = window as any;
-      if (w?.katex?.renderToString) {
+      if (katex?.renderToString) {
         try {
-          return w.katex.renderToString(tex, {
+          return katex.renderToString(tex, {
             displayMode: block,
             throwOnError: false,
             strict: 'ignore',
