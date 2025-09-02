@@ -2,21 +2,21 @@ import { View, Text } from 'react-native';
 import TwoPane from '../../components/TwoPane';
 import ConceptCard from '../../components/ConceptCard';
 
-export default function Entanglement() {
+export default function MeasurementCollapse() {
   return (
     <View style={{ flex:1, padding:16, gap:12 }}>
       <TwoPane
         standard={
           <ConceptCard title="Standard Concept">
             <Text style={{ color:'#b9d7dc' }}>
-              Entanglement occurs when the state of one particle cannot be described independently of another, even when separated by large distances. Measurements on entangled subsystems show correlations stronger than classically allowed.
+              Quantum measurement projects a system's state onto an eigenstate of the measurement operator. After measurement, the wavefunction collapses to the observed eigenstate.
             </Text>
           </ConceptCard>
         }
         simple={
           <ConceptCard title="Simple Version">
             <Text style={{ color:'#b9d7dc' }}>
-              Imagine two magic dice that always show matching numbers no matter how far apart they are. Rolling one instantly tells you the result of the other. That's entanglement.
+              Before you peek, a quantum object tries many outfits at once. Looking forces it to freeze wearing one outfit, the wavefunction collapse.
             </Text>
           </ConceptCard>
         }
