@@ -1,5 +1,5 @@
 // components/Equation.tsx
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { Platform, View, Text } from 'react-native';
 
 type Props = { tex: string; block?: boolean };
@@ -21,6 +21,28 @@ if (Platform.OS === 'web') {
 
 export default function Equation({ tex, block = true }: Props) {
   if (Platform.OS === 'web') {
+    // Track whether KaTeX has loaded (it's injected in web/index.html)
+    const [katexReady, setKatexReady] = useState<boolean>(() => {
+      const w = window as any;
+      return !!(w?.katex?.renderToString);
+    });
+
+    // Poll for the global katex object if it isn't ready yet so that we
+    // re-render once the script finishes loading.
+    useEffect(() => {
+      if (!katexReady) {
+        const id = setInterval(() => {
+          const w = window as any;
+          if (w?.katex?.renderToString) {
+            setKatexReady(true);
+          }
+        }, 50);
+        return () => clearInterval(id);
+      }
+      return undefined;
+    }, [katexReady]);
+
+    // Use global KaTeX loaded from CDN in web/index.html
     const html = useMemo(() => {
       if (katex?.renderToString) {
         try {
@@ -35,7 +57,7 @@ export default function Equation({ tex, block = true }: Props) {
       }
       // Fallback: raw delimiters (will show plain text if KaTeX isn't ready)
       return block ? `$$${tex}$$` : `\\(${tex}\\)`;
-    }, [tex, block]);
+    }, [tex, block, katexReady]);
 
     const isHtml = html.startsWith('<');
 
