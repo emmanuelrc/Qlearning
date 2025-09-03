@@ -3,7 +3,7 @@ import { View, Text, Pressable } from 'react-native';
 
 export default function Home() {
   return (
-    <View className="flex-1 gap-4 p-6">
+    <View className="flex-1 gap-4 bg-slate-900 p-6">
       <Text className="text-3xl font-extrabold text-white">
         Quantum Mechanics, Two Ways
       </Text>
