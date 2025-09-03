@@ -10,8 +10,8 @@ export default function ConceptsLayout() {
         contentStyle: { backgroundColor: '#0e1a23' },
         headerLeft: route.name !== 'index' ? () => (
           <Link href="/concepts" asChild>
-            <Pressable style={{ padding: 4 }}>
-              <Text style={{ color: 'white', fontSize: 18 }}>{'\u2190'}</Text>
+            <Pressable className="p-1">
+              <Text className="text-lg text-white">{'\u2190'}</Text>
             </Pressable>
           </Link>
         ) : undefined,
