@@ -12,6 +12,7 @@ export default function Home() {
       colors={['#0f172a', '#1e293b', '#0f172a']}
       className="flex-1 items-center justify-center px-8"
     >
+      {/* soft blobs */}
       <View className="absolute -left-20 top-10 h-72 w-72 rounded-full bg-teal-500 opacity-20" />
       <View className="absolute bottom-10 right-0 h-72 w-72 rounded-full bg-fuchsia-700 opacity-20" />
 
@@ -19,8 +20,13 @@ export default function Home() {
         <Text className="mb-2 text-center text-5xl font-extrabold text-teal-300">
           Quantum Magic
         </Text>
-        <Text className="mb-6 text-center text-lg text-slate-200">
-          Dive into the subatomic world with vivid visuals and friendly explanations.
+
+        {/* intro from main branch */}
+        <Text className="mb-1 text-center text-slate-200">
+          Quantum Mechanics, Two Ways
+        </Text>
+        <Text className="mb-6 text-center text-slate-300">
+          Each topic is explained in the usual standards (math/notation) and in super simple terms with visuals.
         </Text>
 
         <View className="mb-8 w-full gap-4">
@@ -47,3 +53,4 @@ export default function Home() {
     </LinearGradient>
   );
 }
+
